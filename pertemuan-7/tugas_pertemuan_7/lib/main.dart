@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const appTitle = 'Proyek UTS';
+    const appTitle = 'Sappa';
     return MaterialApp(
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
@@ -65,34 +65,32 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return AppBarScaffold(
-      child: Center(
-        child: Padding(
-          padding: EdgeInsets.only(left: 24, right: 24),
-          // Widget ditampilkan dalam layout Column
-          // Di dalamnya tersusun widget sebagai berikut:
-          // 1. HeadingText (Widget kustom): menampilkan teks "Hai, siapa nama kamu?"
-          // 2. TextField: menampilkan form input untuk nama
-          // 3. ActionButton (Widget kustom): menampilkan tombol submit
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              HeadingText(text: 'Hai, siapa nama kamu?'),
-              SizedBox(height: 10),
-              TextField(
-                controller: _inputController,
-                decoration: InputDecoration(
-                  hintText: 'Masukkan nama kamu',
-                  filled: true,
-                  fillColor: Colors.transparent,
-                  hintStyle: GoogleFonts.outfit(fontSize: 14),
-                ),
-                style: GoogleFonts.outfit(fontSize: 14),
+    return Center(
+      child: Padding(
+        padding: EdgeInsets.only(left: 24, right: 24),
+        // Widget ditampilkan dalam layout Column
+        // Di dalamnya tersusun widget sebagai berikut:
+        // 1. HeadingText (Widget kustom): menampilkan teks "Hai, siapa nama kamu?"
+        // 2. TextField: menampilkan form input untuk nama
+        // 3. ActionButton (Widget kustom): menampilkan tombol submit
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            HeadingText(text: 'Hai, siapa nama kamu?'),
+            SizedBox(height: 10),
+            TextField(
+              controller: _inputController,
+              decoration: InputDecoration(
+                hintText: 'Masukkan nama kamu',
+                filled: true,
+                fillColor: Colors.transparent,
+                hintStyle: GoogleFonts.outfit(fontSize: 14),
               ),
-              SizedBox(height: 20),
-              ActionButton(onPressed: _handleSubmit, text: 'Kirim'),
-            ],
-          ),
+              style: GoogleFonts.outfit(fontSize: 14),
+            ),
+            SizedBox(height: 20),
+            ActionButton(onPressed: _handleSubmit, text: 'Kirim'),
+          ],
         ),
       ),
     );
@@ -138,7 +136,7 @@ class AppBarScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Proyek UTS'),
+        title: const Text('Sappa'),
         titleTextStyle: GoogleFonts.outfit(fontSize: 16, color: Colors.white),
         centerTitle: true,
         backgroundColor: Colors.indigo,
