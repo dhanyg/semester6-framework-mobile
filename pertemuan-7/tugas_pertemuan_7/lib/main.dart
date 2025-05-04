@@ -120,7 +120,7 @@ class InvalidResponse extends StatelessWidget {
   Widget build(BuildContext context) {
     // ResponsePage adalah widget kustom.
     // Penjelasan tentang widget ada pada class ResponsePage.
-    return ResponsePage(heading: 'Nama tidak boleh kosong!');
+    return ResponsePage(heading: 'Hai ! Kamu belum memberi tahu namamu 😅');
   }
 }
 
@@ -197,7 +197,11 @@ class HeadingText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: GoogleFonts.outfit(fontSize: 24),
+      style: GoogleFonts.outfit(
+        fontSize: 24,
+        fontWeight: FontWeight.w600,
+        color: Colors.grey.shade800,
+      ),
       textAlign: TextAlign.center,
     );
   }
